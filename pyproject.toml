@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qrterm"
+version = "0.3.1"
+readme="README.md"
+authors = [
+  { name = "Gokul Raj"}
+]
+description = "A CLI QR Generator with multiple display options"
+requires-python = ">=3.7"
+dependencies = [
+    "qrcode",
+    "Pillow",
+    "argparse",
+    "logging",
+]
+
+[project.scripts]
+qr = "qrterm.__main__:main"
